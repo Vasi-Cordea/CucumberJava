@@ -12,6 +12,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.loginPage;
 
+
+// POM - Page Object Model class example
 public class LoginDemoSteps_POM {
 	
 	WebDriver driver =null;
@@ -79,6 +81,7 @@ public class LoginDemoSteps_POM {
 		
 		//pause code execution
 		Thread.sleep(2000);
+		
 		driver.close();
 		driver.quit();
 		
