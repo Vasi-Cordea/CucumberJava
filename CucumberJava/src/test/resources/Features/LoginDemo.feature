@@ -11,4 +11,25 @@ Feature: Test login funstionality
     Examples: 
       | username | password    |
       | student  | Password123 |
-       | student| passFail|
+      | student  | passFail    |
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      #relates to LoginDemoSteps or (LoginDemoSteps_POM and pages.loginPage)
+      
+       # To execute scenario:
+       # 1. right click 
+       # 2. Run As > 
+       # 1 Cucumber Feature

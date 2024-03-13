@@ -9,12 +9,12 @@ public class loginPage {
 
 	WebDriver driver;
 
-	By acceptaTot_ByXpath = By
+	 public static By acceptaTot_ByXpath = By
 			.xpath("//div[contains(@class,'QS5gu sy4vM') and normalize-space(text())='Acceptă tot' ]");
-	By txt_username = By.id("username");
-	By txt_password = By.id("password");
-	By btn_submit = By.id("submit");
-	By btn_logOut = By.xpath("//*[contains(text(), 'Log out')]");
+	 public static By txt_username = By.id("username");
+	 public static By txt_password = By.id("password");
+	 public static By btn_submit = By.id("submit");
+	 public static By btn_logOut = By.xpath("//*[contains(text(), 'Log out')]");
 	
 	
 	
