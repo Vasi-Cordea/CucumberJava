@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+
+// related to LoginDemoSteps_POM
 public class loginPage {
 
 	WebDriver driver;
@@ -13,10 +15,14 @@ public class loginPage {
 	By txt_password = By.id("password");
 	By btn_submit = By.id("submit");
 	By btn_logOut = By.xpath("//*[contains(text(), 'Log out')]");
+	
+	
+	
 
 	public loginPage(WebDriver driver) {
 
-		// driver = driver;
+		// this driver will refer to the driver in this class. it will help to maintain same session 
+		this.driver = driver;
 	}
 
 	// create separate function for every action on the page
@@ -35,6 +41,11 @@ public class loginPage {
 
 		driver.findElement(btn_submit).click();
 
+	}
+	
+	public void checkLogOutIsDisplayed() {
+		
+		driver.findElement(btn_logOut).isDisplayed();
 	}
 
 	public void loginValidUser(String username, String password) {

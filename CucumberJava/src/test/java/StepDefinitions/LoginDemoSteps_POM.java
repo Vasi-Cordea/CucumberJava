@@ -24,6 +24,8 @@ public class LoginDemoSteps_POM {
 		System.out.println("Project path is:"+ projectPath);
 		
 	 System.out.println("inside step -browser in open");
+	 
+	 // setup chromedriver to be user from inside project folder
 	 System.getProperty("webdriver.chrome.driver",projectPath+"/src/test/resources/drivers/chromedriver.exe");
 	
 	 driver = new ChromeDriver();
@@ -36,9 +38,8 @@ public class LoginDemoSteps_POM {
 
 	@And("user is on login page")
 	public void user_is_on_login_page() {
-		
 	
-		
+
 		driver.navigate().to("https://practicetestautomation.com/practice-test-login/");
 	    
 	}
@@ -46,11 +47,15 @@ public class LoginDemoSteps_POM {
 	@When("^user enters (.*) and (.*)$")
 	public void user_enters_username_and_password(String username, String password) {
 		
+		// call constructor from loginPage
 		 login = new loginPage(driver);
+		 
+		
 		
 		login.enterUsername(username);
 		login.enterPassword(password);
 		
+		// using constructor above will replace initial code:
 		//driver.findElement(By.id("username")).sendKeys(username);
 		//driver.findElement(By.id("password")).sendKeys(password);
 	}
@@ -58,14 +63,24 @@ public class LoginDemoSteps_POM {
    public void user_clicks_on_login() {
 	   
 	   login.clickLogin();
+	   
+		// using login constructor above will replace initial code:
 	   //driver.findElement(By.id("submit")).click();
 	   
    }
 	
 	@Then("user navigates to the homepage")
-	public void user_navigates_to_the_homepage() {
-	  
-		driver.findElement(By.xpath("//*[contains(text(), 'Log out')]")).isDisplayed();
+	public void user_navigates_to_the_homepage() throws InterruptedException {
+
+		login.checkLogOutIsDisplayed();
+		
+		// using constructor above will replace initial code:
+		//driver.findElement(By.xpath("//*[contains(text(), 'Log out')]")).isDisplayed();
+		
+		//pause code execution
+		Thread.sleep(2000);
+		driver.close();
+		driver.quit();
 		
 	}
 
