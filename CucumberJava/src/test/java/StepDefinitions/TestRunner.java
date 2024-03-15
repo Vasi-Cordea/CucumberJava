@@ -11,7 +11,8 @@ monochrome = true,
 plugin= {"pretty", 
 		"junit:target/JUnitReports/report.xml",
 		"json:target/JSONReports/report.json",
-		"html:target/HtmlReports"}
+		"html:target/Cucumber/HtmlReports",
+		"summary"}
 
 		)
 public class TestRunner {
