@@ -1,4 +1,4 @@
-Feature: Test login funstionality
+Feature: Test login functionality
   I want to use this template for my feature file
 
   Scenario Outline: Check login is succesfully with valid credentials
