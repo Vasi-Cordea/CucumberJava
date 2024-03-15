@@ -17,3 +17,6 @@ plugin= {"pretty",
 public class TestRunner {
 
 }
+
+
+// to run test 1.right click 2. Run As 3 JUnit Test
