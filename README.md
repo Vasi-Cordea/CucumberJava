@@ -9,7 +9,7 @@ get source cod link: https://github.com/Vasi-Cordea/CucumberJava.git
 6. change step structure as per: @Given("Browser is  then opened")  
 7. import io.cucumber.java.en.Given;
 8. create a function for each step as per example: public void browser_is_then_opened() {} , name does not have to match the step
-9. eate a new directory pages, 
+9. create a new directory pages, 
 10. creat class page with all the methods used on the page
 11. instantiate methods in the Step definitions page (POM)
 12. creat a test runner, from where the execution and reports will be configured
