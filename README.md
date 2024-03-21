@@ -11,7 +11,7 @@ get source cod link: https://github.com/Vasi-Cordea/CucumberJava.git
 8. create a function for each step as per example: public void browser_is_then_opened() {} , name does not have to match the step
 9. create a new directory pages, 
 10. creat class page with all the methods used on the page
-11. instantiate methods from page class in the Step definitions page  
+11. instantiate methods from page class in the Step definitions page  (POM)
 12. creat a test runner, from where the execution and reports will be configured
 in runner class , right click and run
 13. cheack report in target/Cucumber/HtmlReports
